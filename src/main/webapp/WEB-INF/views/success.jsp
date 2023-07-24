@@ -13,5 +13,11 @@
         <h2>Your email : ${email}</h2>
         <h2>Your password : ${password}</h2>
 
+        <h1>${title}</h1>
+
+        <h2>Welcome ${user.name}</h2>
+        <h2>Welcome ${user.email}</h2>
+        <h2>Welcome ${user.password}</h2>
+
     </body>
 </html>
