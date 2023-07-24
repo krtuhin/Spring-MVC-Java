@@ -6,16 +6,20 @@ import java.util.List;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 //@Controller - this annotation used to treat any java class as a Controller class
 //@RequestMapping - this annotation used to send requested view to the view resolver
+// when use @RequestMapping on class then first write the class url and then method url
 
 @Controller
+@RequestMapping("/tk")
 public class HomeController {
 
     //for home page view
-    @RequestMapping("/home")
+    //define request method
+    @RequestMapping(path = "/home", method = RequestMethod.GET)
     public String home() {
 
         System.out.println("This is home url..");
