@@ -1,6 +1,8 @@
 package com.springmvc.controller;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -36,6 +38,14 @@ public class HomeController {
 
         model.addAttribute("name", "Tuhin Kumar");
         model.addAttribute("contact", "8985698758");
+
+        List<String> friends = new ArrayList<>();
+        friends.add("Tuhin");
+        friends.add("Avijit");
+        friends.add("Prince");
+        friends.add("Soumya");
+
+        model.addAttribute("friends", friends);
 
         return "contact";
     }
