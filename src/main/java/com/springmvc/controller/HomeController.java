@@ -1,6 +1,7 @@
 package com.springmvc.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 //@Controller - this annotation used to treat any java class as a Controller class
@@ -25,5 +26,15 @@ public class HomeController {
         System.out.println("This is about url...");
 
         return "about";
+    }
+
+    //contact view with model object to send data into view
+    @RequestMapping("/contact")
+    public String contact(Model model) {
+
+        model.addAttribute("name", "Tuhin Kumar");
+        model.addAttribute("contact", "8985698758");
+
+        return "contact";
     }
 }
