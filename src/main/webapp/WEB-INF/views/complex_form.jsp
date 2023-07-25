@@ -1,3 +1,5 @@
+<!--Spring form tag library - for show error-->
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!doctype html>
 <html lang="en">
     <head>
@@ -20,6 +22,20 @@
 
                             <div class="text-center">
                                 <h3 class="text-uppercase">Complex form</h3>
+                            </div>
+
+                            <!--error message-->
+                            <div class="text-center">
+                                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+
+                                    <!--show error using spring taglib-->
+                                    <strong> <form:errors path="student.*"/> </strong>
+
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+
+                                </div>
                             </div>
 
                             <form action="register" method="post">
