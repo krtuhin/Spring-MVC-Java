@@ -17,6 +17,9 @@ public class Student {
     private String gender;
     private String type;
 
+    //reference type data
+    private Address address;
+
     public long getId() {
         return id;
     }
@@ -65,8 +68,16 @@ public class Student {
         this.type = type;
     }
 
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+
     @Override
     public String toString() {
-        return "Student{" + "id=" + id + ", name=" + name + ", dob=" + dob + ", course=" + course + ", gender=" + gender + ", type=" + type + '}';
+        return "Student{" + "id=" + id + ", name=" + name + ", dob=" + dob + ", course=" + course + ", gender=" + gender + ", type=" + type + ", address=" + address + '}';
     }
 }

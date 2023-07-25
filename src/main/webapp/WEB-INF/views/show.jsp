@@ -30,6 +30,13 @@
                             <h3>You have selected : <c:forEach var="i" items="${student.course}"><span>${i}, </span></c:forEach> subjects.</h3>
                             <h3>Your gender : ${student.gender}</h3>
                             <h3>You are a ${student.type} student.</h3>
+
+                            <!--reference type data-->
+                            <h3 class="text-primary">Your address: 
+                                <h2>Street : ${student.address.street}</h2>
+                                <h2>City : ${student.address.city}</h2>
+                            </h3>
+
                             <h4 class="text-warning">Thank You..!</h4>
 
                         </div>

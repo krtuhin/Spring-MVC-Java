@@ -66,6 +66,26 @@
                                     </select>
                                 </div>
 
+                                <!--reference type data-->
+                                <div class="card">
+
+                                    <div class="card-body">
+
+                                        <p>Address</p>
+
+                                        <!--input name is important-->
+                                        <div class="form-group">
+                                            <input name="address.street" type="text" class="form-control" placeholder="Enter stree name">
+                                        </div>
+
+                                        <div class="form-group">
+                                            <input name="address.city" type="text" class="form-control" placeholder="Enter city">
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
                                 <div class="text-center">
                                     <button type="submit" class="btn btn-success">Submit</button>
                                 </div>  
