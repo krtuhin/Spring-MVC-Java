@@ -71,6 +71,11 @@ public class ContactController {
     @RequestMapping(path = "/processform", method = RequestMethod.POST)
     public String getUserData(@ModelAttribute User user) {
 
+        //real user of redirecting
+        if (user.getName().isBlank()) {
+            return "redirect:/form";
+        }
+
         //save data into database using user service class
         int id = this.userService.createUser(user);
 
