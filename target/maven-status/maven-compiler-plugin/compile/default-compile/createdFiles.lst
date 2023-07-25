@@ -1,4 +1,7 @@
+com\springmvc\controller\ContactController.class
 com\springmvc\controller\HomeController.class
 com\springmvc\resources\JakartaEE8Resource.class
 com\springmvc\JakartaRestConfiguration.class
+com\springmvc\service\UserService.class
+com\springmvc\dao\UserDao.class
 com\springmvc\models\User.class

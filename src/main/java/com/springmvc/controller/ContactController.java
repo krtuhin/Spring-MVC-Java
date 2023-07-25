@@ -1,7 +1,9 @@
 package com.springmvc.controller;
 
 import com.springmvc.models.User;
+import com.springmvc.service.UserService;
 import javax.servlet.http.HttpServletRequest;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -11,6 +13,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class ContactController {
+
+    @Autowired
+    private UserService userService;
 
     //store common data for all page
     @ModelAttribute
@@ -30,7 +35,7 @@ public class ContactController {
     //send data from view to controller
     //method for get data from form page
     //this is the old method
-    @RequestMapping(path = "/processform", method = RequestMethod.POST)
+    /*@RequestMapping(path = "/processform", method = RequestMethod.POST)
     public String getData(HttpServletRequest request) {
 
         //fetch from data using input name
@@ -59,13 +64,15 @@ public class ContactController {
         model.addAttribute("password", password);
 
         return "success";
-    }
-
+    }*/
     //this is another spring method @ModelAttribute - annotation
     // it will map automatically the field data into user object 
     //for this the attributes of user class are need to be same as form field name
     @RequestMapping(path = "/processform", method = RequestMethod.POST)
     public String getUserData(@ModelAttribute User user) {
+
+        //save data into database using user service class
+        int id = this.userService.createUser(user);
 
         return "success";
     }
