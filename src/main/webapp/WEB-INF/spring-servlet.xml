@@ -21,6 +21,19 @@
     
     <!--delcare the location of static files-->
     <mvc:resources mapping="/resources/**" location="/WEB-INF/resources/"/>
+    
+    <!--configure interceptors-->
+    <mvc:interceptors>
+        
+        <!--for single interceptor-->
+        <mvc:interceptor>
+            
+            <mvc:mapping path="/welcome"/>
+            <bean class="com.springmvc.interceptor.MyInterceptor"/>
+            
+        </mvc:interceptor>
+        
+    </mvc:interceptors>
 
     <!--for enable transaction manager-->
     <tx:annotation-driven/>
