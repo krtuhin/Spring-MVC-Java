@@ -28,6 +28,10 @@ public class RedirectController {
 
         RedirectView redirectView = new RedirectView("second");
 
+        //create null pointer exception
+        String s = null;
+        System.out.println(s.length());
+
         return redirectView;
     }
 }

@@ -54,7 +54,7 @@ public class ComplexController {
         return "complex_form";
     }
 
-    //exception handler page 
+    /*//exception handler page 
     //when any exception has occured then controller will show this page
     //we can declare particular exception name
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
@@ -85,5 +85,5 @@ public class ComplexController {
         model.addAttribute("msg", "Exception has occured..!");
 
         return "error_page";
-    }
+    }*/
 }
