@@ -1,3 +1,6 @@
+<!--JSTL uri-->
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!doctype html>
 <html lang="en">
     <head>
@@ -8,12 +11,22 @@
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-        <title>Form Page</title>
-    </head>
-    <body>
-        <div class="container my-5">
+        <!--attach css file using jstl tag-->
+        <link href="<c:url value="/resources/css/style.css"></c:url>" type="text/stylesheet"/>
 
-            <h1 class="text-center">${title}</h1>
+            <!--attach js file using jstl tag-->
+            <script src="<c:url value="/resources/js/script.js"></c:url>"></script>
+
+            <title>Form Page</title>
+        </head>
+        <body>
+
+            <!--add image using jstl tag-->
+            <img src="<c:url value="/resources/img/abc.jpg"></c:url>" alt="Images">
+
+            <div class="container my-5">
+
+                <h1 class="text-center">${title}</h1>
 
             <form action="processform" method="post">
 
